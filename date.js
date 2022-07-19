@@ -72,70 +72,92 @@ function go() {
         // console.log(curmon)
         console.log(balanceageday)
     }
+
+
+
+
+    //...............................................
+    //creating button
+    for (i = 1; i <= furage; i++) {
+        // di.remove();
+        //di.removeChild(button)
+        
+        console.log(i)
+        var button = document.createElement('button')
+        button.setAttribute('style', 'background-color: red');
+        // console.log(button)
+        di.appendChild(button)
+    }
+    for (i = 1; i <= balanceagemonth; i++) {
+        console.log(i)
+        var button = document.createElement('button')
+        button.setAttribute('style', 'background-color: green');
+        // console.log(button)
+        di.appendChild(button)
+    }
+    for (i = 1; i <= balanceageday; i++) {
+        console.log(i)
+        var button = document.createElement('button')
+        button.setAttribute('style', 'background-color: black');
+        // console.log(button)
+        di.appendChild(button)
+    }
+    //................
+}
+
+
 month.addEventListener("click", change)
 function change() {
-    document.getElementById('days').value=''
+    document.getElementById('days').value = ''
     if (month.value == 2) {
-        days.innerHTML=''
-        
-
-        document.getElementById('days').value=''
-
+        days.innerHTML = ''
+        document.getElementById('days').value = ''
         if ((0 == yr % 4) && (0 != yr % 100) || (0 == yr % 400)) {
-            days.innerHTML=''
+            days.innerHTML = ''
             for (i = 1; i <= 29; i++) {
-                var option1 = document.createElement('option')
+                var op = document.createElement('option')
                 var optionText = document.createTextNode(i);
-                console.log(option1);
-                
-                var option2 = option1.appendChild(optionText)
-                days.appendChild(option1)
-                
-                
+                console.log(op);
+                var oop = op.appendChild(optionText)
+                days.appendChild(op)
             }
-           
         }
         else {
-            days.innerHTML=''
+            days.innerHTML = ''
             for (i = 1; i <= 28; i++) {
-                var option1 = document.createElement('Option')
+                var op = document.createElement('Option')
                 var optionText = document.createTextNode(i);
-                console.log(option);
-                 
-                var option2 = option1.appendChild(optionText)
-                days.appendChild(option1)
-                 
+                console.log(op);
+                var oop = op.appendChild(optionText)
+                days.appendChild(op)
             }
         }
-       
-
-
     }
     else if (month.value == 1 || month.value == 3 || month.value == 5 || month.value == 7 || month.value == 8 || month.value == 10 || month.value == 12) {
-        days.innerHTML=''
+        days.innerHTML = ''
         for (i = 1; i <= 31; i++) {
-            var option1 = document.createElement('Option')
+            var op = document.createElement('Option')
             const optionText = document.createTextNode(i);
-            console.log(option1);
-             
-            days.appendChild(option1)
-
-            var option2 = option1.appendChild(optionText)
+            console.log(op);
+            days.appendChild(op)
+            var oop = op.appendChild(optionText)
         }
     }
     else if (month.value == 00) {
     }
     else {
-        days.innerHTML=''
+        days.innerHTML = ''
         for (i = 1; i <= 30; i++) {
-            var option1 = document.createElement('Option')
+            var op = document.createElement('Option')
             const optionText = document.createTextNode(i);
-            console.log(option1);
-             
-            var option2 = option1.appendChild(optionText)
-            days.appendChild(option1)
-
-             
+            console.log(op);
+            var oop = op.appendChild(optionText)
+            days.appendChild(op)
         }
     }
 }
+
+
+
+
+
